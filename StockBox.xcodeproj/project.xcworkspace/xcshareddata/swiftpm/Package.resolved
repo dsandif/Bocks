@@ -1,0 +1,88 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "AAInfographics",
+        "repositoryURL": "https://github.com/AAChartModel/AAChartKit-Swift.git",
+        "state": {
+          "branch": null,
+          "revision": "9be1dcdf92c5b9ed9e2b83f4dd9fbd801e40e1ce",
+          "version": "6.0.0"
+        }
+      },
+      {
+        "package": "ACarousel",
+        "repositoryURL": "https://github.com/JWAutumn/ACarousel",
+        "state": {
+          "branch": null,
+          "revision": "8a322513580f21288fd87eb3a1341c247b3e2a76",
+          "version": "0.2.0"
+        }
+      },
+      {
+        "package": "Alamofire",
+        "repositoryURL": "https://github.com/Alamofire/Alamofire.git",
+        "state": {
+          "branch": null,
+          "revision": "eaf6e622dd41b07b251d8f01752eab31bc811493",
+          "version": "5.4.1"
+        }
+      },
+      {
+        "package": "ExyteGrid",
+        "repositoryURL": "https://github.com/exyte/Grid",
+        "state": {
+          "branch": null,
+          "revision": "12f1271635eec387b05f2428e98b80869bc17b0a",
+          "version": "0.1.0"
+        }
+      },
+      {
+        "package": "Haptica",
+        "repositoryURL": "https://github.com/efremidze/Haptica.git",
+        "state": {
+          "branch": null,
+          "revision": "4084702c85102c2d17d58e42ec5a750094944864",
+          "version": "3.0.2"
+        }
+      },
+      {
+        "package": "Marquee",
+        "repositoryURL": "https://github.com/SwiftUIKit/Marquee.git",
+        "state": {
+          "branch": null,
+          "revision": "c0ca3fe49f91cbf4fda7a4fbcf9d79db6796db85",
+          "version": "0.2.0"
+        }
+      },
+      {
+        "package": "Peep",
+        "repositoryURL": "https://github.com/efremidze/Peep.git",
+        "state": {
+          "branch": null,
+          "revision": "6ba6217b6fa53d53e635f20ed225261398b32116",
+          "version": "3.0.0"
+        }
+      },
+      {
+        "package": "SQift",
+        "repositoryURL": "https://github.com/DnV1eX/SQift.git",
+        "state": {
+          "branch": null,
+          "revision": "4bebb60aa247570bfa14f259b56df77e139f0cfc",
+          "version": "5.0.2"
+        }
+      },
+      {
+        "package": "SwiftDate",
+        "repositoryURL": "https://github.com/malcommac/SwiftDate.git",
+        "state": {
+          "branch": null,
+          "revision": "6190d0cefff3013e77ed567e6b074f324e5c5bf5",
+          "version": "6.3.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

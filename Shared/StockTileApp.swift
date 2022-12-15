@@ -11,7 +11,8 @@ import SwiftUI
 struct StockTileApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Map()
+                .background(Color("Neutral"))
         }
     }
 }
