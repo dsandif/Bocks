@@ -139,7 +139,7 @@ struct StockView_Previews: PreviewProvider {
         return t
     }
     
-    static var cp: CompanyProfile{
+    static var cp: CompanyProfile {
         var pro = CompanyProfile()
 //        pro.symbol = "AAPL"
 //        pro.price = 121.26
@@ -179,10 +179,10 @@ struct StockView_Previews: PreviewProvider {
     }
 
     static var previews: some View {
-        Text("Test")
-//        StockView(quote: .constant(StockView_Previews.q), companyInfo: StockView_Previews.cp.description)
-//            .frame(minWidth: 0, maxWidth: .infinity, minHeight: .infinity, maxHeight: .infinity)
-//            .edgesIgnoringSafeArea(.all)
+        
+      StockView(quote: StockView_Previews.q, marketHours: [])
+            .frame(minWidth: 0, maxWidth: .infinity, minHeight: .infinity, maxHeight: .infinity)
+            .edgesIgnoringSafeArea(.all)
 
     }
 }

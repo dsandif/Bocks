@@ -56,7 +56,7 @@ class StockManager{
     }
   
     func getNews(for symbol: String, completionHandler: @escaping (_ result: NewsList) -> Void){
-        let reqURL = baseDomain + api + Resource.newsList.rawValue + symbol + "&limit=50&apikey=\(apikey)"
+        let reqURL = baseDomain + api + Resource.newsList.rawValue + symbol + "&limit=50&apikey=\(self.apikey)"
         
         AF.request(reqURL).responseDecodable(of: NewsList.self) { quote in
             guard let data = quote.value else {
@@ -67,7 +67,7 @@ class StockManager{
     }
     
     func getcompanyProfile(for symbol: String, completionHandler: @escaping (_ result: CompanyProfile?) -> Void){
-        let reqURL = baseDomain + api + Resource.profile.rawValue + symbol + "?apikey=\(apikey)"
+        let reqURL = baseDomain + api + Resource.profile.rawValue + symbol + "?apikey=\(self.apikey)"
         AF.request(reqURL).responseDecodable(of: ProfileList.self) { profiles in
             guard let data = profiles.value else {
                 return // TODO: return error too
@@ -78,7 +78,7 @@ class StockManager{
 
     
     func getChartPrices(for symbol: String, completionHandler: @escaping (_ result: ChartPrices) -> Void){
-        let reqURL = baseDomain + api + Resource.historicalChart.rawValue + symbol + "?apikey=\(apikey)"
+        let reqURL = baseDomain + api + Resource.historicalChart.rawValue + symbol + "?apikey=\(self.apikey)"
         
         AF.request(reqURL).responseDecodable(of: ChartPrices.self) { prices in
             guard let data = prices.value else {
@@ -91,7 +91,7 @@ class StockManager{
     
     
     func getMainNews(_ completionHandler: @escaping (_ result: String) -> Void){
-        let reqURL = baseDomain + api + Resource.mainNewsList.rawValue + "?limit=50&apikey=\(apikey)"
+        let reqURL = baseDomain + api + Resource.mainNewsList.rawValue + "?limit=50&apikey=\(self.apikey)"
         
         AF.request(reqURL).responseDecodable(of: NewsList.self) { quote in
             guard let data = quote.value else {
@@ -110,7 +110,7 @@ class StockManager{
         //call this here because its first screen and constantly updated
             print("fetching symbols...")
       
-            let reqURL = baseDomain + api + Resource.symbols.rawValue + "&apikey=\(apikey)"
+            let reqURL = baseDomain + api + Resource.symbols.rawValue + "&apikey=\(self.apikey)"
             AF.request(reqURL).responseDecodable(of: SymbolList.self) { symbols in
                 guard let data = symbols.value else {
                     print(symbols)
@@ -124,7 +124,7 @@ class StockManager{
                 }).joined(separator: ",")
             
 
-                let mapURL = "\(baseDomain)\(api)\(Resource.quote)/\(tickers)?apikey=\(apikey)"
+              let mapURL = "\(baseDomain)\(api)\(Resource.quote)/\(tickers)?apikey=\(self.apikey)"
                 print(mapURL)
                 AF.request(mapURL).responseDecodable(of: QuoteList.self) { quote in
                     guard let mapData = quote.value else {
@@ -151,7 +151,7 @@ class StockManager{
     }
 
     func getQuote(for symbol: String, completionHandler: @escaping (_ result: Quote) -> Void){
-        let reqURL = "\(baseDomain)\(api)\(Resource.quote)/\(symbol)?apikey=\(apikey)"
+        let reqURL = "\(baseDomain)\(api)\(Resource.quote)/\(symbol)?apikey=\(self.apikey)"
         AF.request(reqURL).responseDecodable(of: Quote.self) { quote in
             guard let data = quote.value else {
                 return
@@ -162,7 +162,7 @@ class StockManager{
     }
     
     func getMarketHours(_ completionHandler: @escaping (_ result: MarketHours) -> Void){
-        let reqURL = baseDomain + api + Resource.marketHours.rawValue + "?apikey=\(apikey)"
+        let reqURL = baseDomain + api + Resource.marketHours.rawValue + "?apikey=\(self.apikey)"
         AF.request(reqURL).responseDecodable(of: MarketHours.self) { time in
             guard let data = time.value else {
                 print(time)

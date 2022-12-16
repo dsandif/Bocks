@@ -10,6 +10,7 @@ import Alamofire
 
 struct PropertyList: Codable {
     var twitterBearer : String
+    var stockManagerApiKey: String
 }
 
 class TwitterClient {
